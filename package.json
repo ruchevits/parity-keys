@@ -1,0 +1,17 @@
+{
+  "name": "parity-keys",
+  "version": "1.0.0",
+  "description": "Library to load parity keys from file",
+  "author": {
+    "name": "Edward Ruchevits",
+    "email": "ruchevits@gmail.com",
+    "url": "http://ruchevits.com"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "eccrypto": "^1.0.3",
+    "jsonfile": "^2.4.0",
+    "keythereum": "^0.3.2",
+    "lodash": "^4.17.4"
+  }
+}
