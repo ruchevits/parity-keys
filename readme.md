@@ -1,6 +1,6 @@
 # Parity keys
 
-```
+```js
 const ParityKeys = require('parity-keys')
 
 const parityKeys = new ParityKeys({
