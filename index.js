@@ -12,7 +12,11 @@ module.exports = class ParityKeys {
 	constructor(options) {
 		this.keysDir = path.join(options.dataDir, 'keys', options.chainName)
 		const keyFiles = fs.readdirSync(this.keysDir)
-		const accNames = _.map(keyFiles, keyFile => '0x' + keyFile.substr(keyFile.length - 40))
+		const accNames = _.map(keyFiles, keyFile => {
+			const fileName = path.join(this.keysDir, keyFile)
+			const file = jsonfile.readFileSync(fileName)
+			return `0x${file.address}`
+		})
 		this.files = _.zipObject(accNames, keyFiles)
 	}
 
